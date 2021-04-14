@@ -4,7 +4,7 @@ const app = express()
 const server = http.createServer(app)
 const io = require("socket.io")(server, {
 	cors: {
-		origin: "http://localhost:3000",
+		origin: "https://test-zoom-14ac5.web.app",
 		methods: [ "GET", "POST" ]
 	}
 })
@@ -25,4 +25,4 @@ io.on("connection", (socket) => {
 	})
 })
 
-server.listen(5000, () => console.log("server is running on port 5000"))
+server.listen(3000, () => console.log("server is running on port 5000"))
